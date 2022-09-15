@@ -32,6 +32,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
                 .antMatchers("/layui/**","/index") //表示配置请求路径
                 .permitAll() // 指定 URL 无需保护。
+//                .antMatchers("/findAll").hasAuthority("admins")//需要用户有admins权限
+//                .antMatchers("/find").hasAnyAuthority("role,admin")//需要用户有role或者admin权限
+                .antMatchers("/find").hasRole("admin")//需要用户有admin角色
                 .anyRequest() // 其他请求
                 .authenticated(); //需要认证
 // 关闭 csrf

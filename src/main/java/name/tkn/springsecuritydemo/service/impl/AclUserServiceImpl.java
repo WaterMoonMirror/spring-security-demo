@@ -38,7 +38,7 @@ public class AclUserServiceImpl extends ServiceImpl<AclUserMapper, AclUser> impl
         }
         System.out.println(users);
         List<GrantedAuthority> auths =
-                AuthorityUtils.commaSeparatedStringToAuthorityList("role");
+                AuthorityUtils.commaSeparatedStringToAuthorityList("admin,role,ROLE_admin");
         return new User(users.getUsername(),
                 new BCryptPasswordEncoder().encode(users.getPassword()),auths);
     }

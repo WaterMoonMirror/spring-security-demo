@@ -31,4 +31,10 @@ public class HelloController {
         return "fail";
     }
 
+    @GetMapping("/find")
+    @ResponseBody
+    public String find(){
+        return "find";
+    }
+
 }
