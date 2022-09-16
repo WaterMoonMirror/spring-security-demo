@@ -73,6 +73,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .userDetailsService(usersService);
 
 // 关闭 csrf
-        http.csrf().disable();
+//        http.csrf().disable();
     }
 }
