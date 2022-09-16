@@ -21,12 +21,10 @@ public class HelloController {
         return "findAll";
     }
     @PostMapping("/success")
-    @ResponseBody
     public String success(){
         return "success";
     }
     @PostMapping("/fail")
-    @ResponseBody
     public String fail() {
         return "fail";
     }
